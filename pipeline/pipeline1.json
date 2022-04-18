@@ -20,6 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFileName": ".csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -63,14 +64,7 @@
 			{
 				"name": "Delete1",
 				"type": "Delete",
-				"dependsOn": [
-					{
-						"activity": "Copy data1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
