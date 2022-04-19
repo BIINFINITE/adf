@@ -1,0 +1,13 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
