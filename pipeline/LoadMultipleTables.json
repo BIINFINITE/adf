@@ -76,7 +76,7 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"preCopyScript": {
-										"value": "@{concat('Truncate table ',item().name)}",
+										"value": "@{concat('Truncate Table', substring(item().name,0,lastindexof(item().name,'_')))}",
 										"type": "Expression"
 									},
 									"writeBehavior": "insert",
