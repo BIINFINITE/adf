@@ -70,6 +70,13 @@
 										}
 									}
 								},
+								"logStorageSettings": {
+									"linkedServiceName": {
+										"referenceName": "Src_csv",
+										"type": "LinkedServiceReference"
+									},
+									"path": "archive"
+								},
 								"enableLogging": true,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
