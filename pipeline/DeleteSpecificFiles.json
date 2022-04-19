@@ -62,12 +62,22 @@
 							"typeProperties": {
 								"dataset": {
 									"referenceName": "Deleteblob",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@item().FolderName",
+											"type": "Expression"
+										}
+									}
 								},
 								"enableLogging": true,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
+									"wildcardFileName": {
+										"value": "@{item().wildcard}",
+										"type": "Expression"
+									},
 									"enablePartitionDiscovery": false
 								}
 							}
