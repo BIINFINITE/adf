@@ -1,0 +1,30 @@
+{
+	"name": "trigger_File",
+	"properties": {
+		"description": "Run the job once the file is present",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "StorageEventTrigger",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Finame": "@triggerBody.filename",
+					"Foname": "@triggerBody.folderpath"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/test",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/28f729a1-ceee-48a1-9c74-decec703fd35/resourceGroups/DataLake/providers/Microsoft.Storage/storageAccounts/biinfinite",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
