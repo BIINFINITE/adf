@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "This trigger runs every day",
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
