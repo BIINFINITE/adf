@@ -1,0 +1,7 @@
+{
+	"name": "ADLS_Private",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/28f729a1-ceee-48a1-9c74-decec703fd35/resourceGroups/DataLake/providers/Microsoft.Storage/storageAccounts/biinfinite",
+		"groupId": "dfs"
+	}
+}

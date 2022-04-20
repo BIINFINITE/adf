@@ -1,0 +1,25 @@
+{
+	"name": "Schedule_Daily",
+	"properties": {
+		"description": "This trigger runs every day",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "DeleteSpecificFiles",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2022-04-20T07:27:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

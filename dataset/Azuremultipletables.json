@@ -1,16 +1,24 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "Azuremultipletables",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDB",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "Sales"
+			"table": {
+				"value": "@dataset().TableName",
+				"type": "Expression"
+			}
 		}
 	}
 }
